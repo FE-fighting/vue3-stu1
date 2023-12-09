@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <h2 :style="{color:fontColor}">哈哈哈</h2>
+        <!--style的某些值是来自于data中的对象
+        动态绑定style得用上对象类型,写死的固定属性在对象里要打上单引号，写成驼峰也能解析
+        后面拼接px,使用对象写法直接绑定"对象名"
+        当属性不确定，动态绑定属性名
+        -->
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    fontColor: "blue"
+
+                }
+            },
+            methods: {
+
+
+            },
+        })
+        app.mount("#app")
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <h2>aaa{{message}}</h2>
+        <!--这种可以进行拼接-->
+        <h2 v-text="message">aaa</h2>
+        <!--v-text也是可以绑定值，可以把值进行替换-->
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    message: "nhao"
+                }
+            },
+            methods: {
+
+
+            },
+        })
+        app.mount("#app")
+    </script>
+</body>
+
+</html>
+
+</html>

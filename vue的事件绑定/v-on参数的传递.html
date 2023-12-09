@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <button @click="btnClick">按钮1</button>
+        <button @click="btn2Click('why',age)">按钮2</button>
+        <button @click="btn3Click('wh有',age,$event)">按钮3</button>
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+        const app = Vue.createApp({
+            //插值语法
+            data: function() {
+
+                return {
+                    age: 18,
+
+                }
+            },
+            methods: {
+                btnClick() {
+                    //无参时会有一个默认参数event
+                    console.log(event)
+                },
+                btn2Click(name, age) {
+                    console.log(name, age)
+
+                },
+                btn3Click(name, age, event) {
+                    console.log(name, age, event)
+
+                },
+            },
+
+        })
+        app.mount("#app")
+    </script>
+</body>
+
+</html>

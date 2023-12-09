@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app" v-pre>
+        <h2>aaa{{message}}</h2>
+        <h2>计数：{{}}</h2>
+        <!--v-pre用于跳过元素和它子元素的编译过程，显示原始的Mustache标签
+        跳过不需要编译的节点，加快编译速度
+        -->
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    message: "nhao",
+                    count: 0
+                }
+            },
+            methods: {
+
+
+            },
+        })
+        app.mount("#app")
+    </script>
+</body>
+
+</html>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            height: 100px;
+            width: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+
+        <div class="box" @click="divClick">u
+            <!--可以用表达式-->
+
+        </div>
+        <div class="box" @mousemove="divMouseMove">
+            <!--@是v-on语法糖可以用表达式-->
+
+
+        </div>
+        <div></div>
+        <!--绑定多个事件-->
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+
+                }
+            },
+            methods: {
+                divClick() {
+                    console.log("nn")
+                },
+                divMouseMove() {
+                    console.log("move")
+                }
+
+
+            },
+        })
+        app.mount("#app")
+    </script>
+</body>
+
+</html>

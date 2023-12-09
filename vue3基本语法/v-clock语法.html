@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        [v-clock] {
+            display: none;
+            /**隐藏元素*/
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <h2 v-clock>aaa{{message}}</h2>
+        <h2 v-clock>计数：{{count}}</h2>
+        <!--先解析html元素然后下载相关的vue文件，在解析下面的数据，方法
+            v-clock斗篷，遮住斗篷要和css配合起来使用
+        -->
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+        setTimeout(() => {
+            //计时器三秒之后进行解析
+
+            const app = Vue.createApp({
+                data() {
+                    return {
+                        message: "nhao",
+                        count: 0
+                    }
+                },
+                methods: {
+
+
+                },
+            })
+            app.mount("#app")
+        }, 3000)
+    </script>
+</body>
+
+</html>
+
+</html>

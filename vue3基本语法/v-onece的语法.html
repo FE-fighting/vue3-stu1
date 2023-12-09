@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <h2 v-once>{{message}}</h2>
+        <button @click="changeMessage">改变message</button>
+        <!--指令写到属性的位置，v-once只会渲染一次-->
+        <!---v-once当数据发生变化时，元素或者组件以及其所有的子元素将视为静态内容并且跳过-->
+        <!--该指令可以用于性能优化-->
+        <!--子节点，也是只会渲染一次-->
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    message: "name"
+
+                }
+            },
+            methods: {
+                changeMessage: function() {
+                    this.message = "李大爷"
+
+                }
+
+            },
+        })
+        app.mount("#app")
+    </script>
+</body>
+
+</html>
+
+</html>

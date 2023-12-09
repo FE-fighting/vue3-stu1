@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <div v-memo="[name]">
+            <!--当名字发生改变时进行重新渲染，其他变化时是不会渲染-->
+            <h2>名字：{{name}}</h2>
+            <h2>age：{{age}}</h2>
+            <h2>身高：{{height}}</h2>
+        </div>
+        <button @clock="update">更新信息</button>
+        <!--性能优化v-memo="[]"格式-->
+
+    </div>
+    <!--v-memo是将配合v-for进行使用-->
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    name: "why",
+                    age: 18,
+                    height: 1.88
+                }
+            },
+            methods: {
+                update: function() {
+                    this.name = "王坤";
+
+                }
+
+
+            },
+        })
+        app.mount("#app")
+    </script>
+</body>
+
+</html>

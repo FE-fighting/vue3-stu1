@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        {{message}}
+        <!--基本使用，也可以文本插入-->
+        当前的文本{{message}}
+        <!--表达式-->
+        {{count*2}}
+        <h2>{{age >=18? "成年人":"未成年人"}}</h2>
+        <!--不能定义语句，可以调用message函数-->
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+        //Mustache胡子语法，插值语法，data返回的对象是添加到vue的响应式系统中
+        //当data中的数据发生改变时，对应的内容也会发生实时更新
+        //不仅仅可以是data中的属性也可以是js的表达式
+        const app = Vue.createApp({
+            data() {
+                return {
+                    message: "您好",
+                    count: 0,
+                    age: 22,
+                }
+            },
+            methods: {
+
+
+
+            },
+        })
+        app.mount("#app")
+    </script>
+</body>
+
+</html>
+
+</html>

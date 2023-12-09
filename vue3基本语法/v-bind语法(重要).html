@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <div><button @click="changePhone">切换图片</button>
+        </div>
+        <!--v-bind用于绑定一个属性或多个属性，或者向另一个组件传递props值，属性进行动态绑定，语法糖：全局属性-->
+        <!--绑定img的src属性-->
+        <img v-bind:src="imgurl" alt="" style="height: 100px;width: 100px;">
+        <p>
+            <a :href="herfurl">百度一下</a>
+            <!--绑定a的href属性-->
+    </div>
+    <!--v-bind用来绑定属性，属性动态缩写：
+    any是有参，object是无参-->
+
+    <script src=" https://unpkg.com/vue@next "></script>
+    <script>
+        const app = Vue.createApp({
+
+            data() {
+                return {
+                    imgurl: "https://img.zhisheji.com/bbs/forum/201401/05/153945tbr7pg5torfzptso.jpg ",
+                    herfurl: "https://www.baidu.com/?tn=85070231_44_hao_pg&H123Tmp=nunew11 ",
+                }
+            },
+            methods: {
+                changePhone: function() {
+                    this.imgurl = "https://lmg.jj20.com/up/allimg/1113/052420110515/200524110515-2-1200.jpg"
+                }
+
+
+            },
+            props: {
+                url: {
+                    type: String,
+                    required: true,
+                },
+                height: {
+                    type: Number,
+                },
+                width: {
+                    type: Number,
+                }
+            }
+        })
+        app.mount("#app ")
+    </script>
+</body>
+
+</html>
