@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <template>
+        <!--用来包裹整体，起包裹作用，优化少渲染div
+        template元素可以当作不可见的包裹元素，并且v-if上使用，但是最终template不会被渲染出来
+    类似于小程序block-->
+    <div id="app">
+        <div class="info" v-if="Object.keys(info).length">
+            <!--数组判断是否有key,是个数组所以加上一个length-->
+            <h2>个人信息</h2>
+            <ul>
+
+                <li>age 姓名：{{info.name}}
+                </li>
+                <li>
+                    年龄：{{info.age}}
+                </li>
+            </ul>
+        </div>
+    </template>
+    <!--v-if="条件 "，v-if是惰性的
+        当条件为false时，其判断的内容完全不会被渲染或者或直接销毁掉
+    当为true时，才会真正渲染条件模块中的内容-->
+    <!--当条件不成立用v-else-->
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+        const app = Vue.createApp({
+            //插值语法
+
+            data: function() {
+
+                return {
+                    info: {
+                        name: "why",
+                        age: 18
+                    }
+
+                }
+            },
+
+        })
+        app.mount("#app")
+    </script>
+</body>
+
+</html>

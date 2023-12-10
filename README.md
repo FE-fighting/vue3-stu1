@@ -8,3 +8,6 @@ Model-View-Controller
 ViewModel在Model和view之间帮助完成数据绑定和DOM渲染
 view绑定名称后，binding底层自动完成绑定
 ![Alt text](image-2.png)
+![Alt text](image-3.png)
+![Alt text](image-4.png)
+![Alt text](image-5.png)

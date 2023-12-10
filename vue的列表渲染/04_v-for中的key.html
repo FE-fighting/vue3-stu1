@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <div id="app">
+        <button @click="insertF">插入f</button>
+
+        <ul>
+            <li v-for="item in leters" :key="item">{{item}}</li>
+            <!--v-for的元素上绑定key是一种特殊属性Vue 默认按照“就地更新”的策略来更新通过 v-for 渲染的元素列表。当数据项的顺序改变时，Vue 不会随之移动 DOM 元素的顺序，而是就地更新每个元素，确保它们在原本指定的索引位置上渲染。
+
+默认模式是高效的，但只适用于列表渲染输出的结果不依赖子组件状态或者临时 DOM 状态 (例如表单输入值) 的情况。
+
+为了给 Vue 一个提示，以便它可以跟踪每个节点的标识，从而重用和重新排序现有的元素，你需要为每个元素对应的块提供一个唯一的 key attribute-->
+            <!--VNode的全称是虚拟节点，无论是组件还是元素，它们最终在Vue中表示出来的是一个个VNode,
+            VNode的本质是一个js对象-->
+            <!--如果是有一堆元素，那么就会形成一个VNode Tree那么就是虚拟DOM,将虚拟DOM树转化为真是的DOM树-->
+            <!--虚拟DOM是为了方便跨平台1虚拟DOM转化为真实DOM，渲染在浏览器上
+            虚拟DOM转换成移动端原生组件控件，也可转成桌面控件，也可以转换为VR设备-->
+            <!--diff算法-->
+        </ul>
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+        const app = Vue.createApp({
+            //插值语法
+
+            data: function() {
+
+                return {
+                    leters: ["a", "b", "c", "d"]
+
+                }
+            },
+            methods: {
+                insertF() {
+                    this.leters.splice(2, 0, "f");
+                }
+            },
+
+        })
+        app.mount("#app")
+    </script>
+</body>
+
+</html>

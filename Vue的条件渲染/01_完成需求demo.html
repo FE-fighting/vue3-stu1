@@ -8,15 +8,21 @@
 </head>
 
 <body>
-    <div id="app"></div>
+    <div id="app">
+        <ul v-if="names.length>0">
+            <li v-for="item in names">{{item}}</li>
+        </ul>
+        <h2 v-else>当前name没有数据，请求获取数据后展示</h2>
+
+    </div>
     <script src="https://unpkg.com/vue@next"></script>
     <script>
         const app = Vue.createApp({
-            //插值语法
 
             data: function() {
 
                 return {
+                    names: ["abc", "bcd", "efg"],
 
                 }
             },

@@ -8,7 +8,14 @@
 </head>
 
 <body>
-    <div id="app"></div>
+    <div id="app">
+        <h2 v-if="score > 90">优秀</h2>
+        <h2 v-else-if="score > 80">良好</h2>
+        <h2 v-else-if="score >= 60">及格</h2>
+        <!--单个条件用v-if,多个条件用v-else-if-->
+        <h2 v-else>不及格</h2>
+
+    </div>
     <script src="https://unpkg.com/vue@next"></script>
     <script>
         const app = Vue.createApp({
@@ -17,6 +24,7 @@
             data: function() {
 
                 return {
+                    score: 40,
 
                 }
             },

@@ -9,12 +9,11 @@
 
 <body>
     <div id="app">
-        <div>
-
-            <button @click=""></button>
-        </div>
-
-
+        <ul>
+            <li v-for="item in names">{{names}}</li>
+        </ul>
+        <button @click="change">修改数字</button>
+        <button @click="add">添加数字</button>
     </div>
     <script src="https://unpkg.com/vue@next"></script>
     <script>
@@ -24,7 +23,17 @@
             data: function() {
 
                 return {
+                    names: ["abc", "bcd"]
 
+                }
+            },
+            methods: {
+                change() {
+                    this.names = ["kobe", "nba"]
+                },
+                add() {
+                    this.names.push("add");
+                    this.names.sort()
                 }
             },
 

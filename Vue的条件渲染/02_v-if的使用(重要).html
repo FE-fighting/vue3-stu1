@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <div class="info" v-if="Object.keys(info).length">
+            <!--数组判断是否有key,是个数组所以加上一个length-->
+            <h2>个人信息</h2>
+            <ul>
+
+                <li>age 姓名：{{info.name}}
+                </li>
+                <li>
+                    年龄：{{info.age}}
+                </li>
+            </ul>
+        </div>
+        <!--v-if="条件 "，v-if是惰性的
+        当条件为false时，其判断的内容完全不会被渲染或者或直接销毁掉
+    当为true时，才会真正渲染条件模块中的内容-->
+        <!--当条件不成立用v-else-->
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+        const app = Vue.createApp({
+            //插值语法
+
+            data: function() {
+
+                return {
+                    info: {
+                        name: "why",
+                        age: 18
+                    }
+
+                }
+            },
+
+        })
+        app.mount("#app")
+    </script>
+</body>
+
+</html>
