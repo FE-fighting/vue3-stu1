@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <!--实现手动双向绑定-->
+        <!--v-model实现自动双向绑定其实有两个操作，v-bind绑定value属性的值，v-on绑定input事件监听到函数中，函数会获取最新的值赋值到绑定的属性中-->
+        <input type="text" v-model="message"> </input>
+        <button>登录</button>
+        <h2>{{message}}</h2>
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+        const app = Vue.createApp({
+            //插值语法
+            //表单交互，非常常用，和用户交互的重要手段
+            //登录，注册，检索，创建，更新
+            //v-model双向数据绑定，控件类型自动选择正确方法更新元素
+            //v-model本质上是语法糖，负责监听用户的输入事件更新语法糖
+            data: function() {
+
+                return {
+                    message: "hello"
+
+                }
+            },
+            methods: {
+
+                inputChange(event) {
+                    this.message = event.target.value
+
+                }
+            },
+
+        })
+        app.mount("#app")
+    </script>
+</body>
+
+</html>

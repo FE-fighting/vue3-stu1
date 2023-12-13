@@ -22,9 +22,15 @@
             <!--VNode的全称是虚拟节点，无论是组件还是元素，它们最终在Vue中表示出来的是一个个VNode,
             VNode的本质是一个js对象-->
             <!--如果是有一堆元素，那么就会形成一个VNode Tree那么就是虚拟DOM,将虚拟DOM树转化为真是的DOM树-->
-            <!--虚拟DOM是为了方便跨平台1虚拟DOM转化为真实DOM，渲染在浏览器上
+            <!--虚拟DOM是为了方便跨平台,浏览器的兼容性更加好，虚拟DOM转化为真实DOM，渲染在浏览器上
             虚拟DOM转换成移动端原生组件控件，也可转成桌面控件，也可以转换为VR设备-->
+            <!--虚拟DOM优化性能，减少重绘和回流-->
             <!--diff算法-->
+            <!--虚拟DOM没变的东西就不会发生改变，没有key就不知道原来有的东西，当有key，原来不变的就不变进行代码复用，key有底层代码进行，有key和没有key调用不同的方法，
+                有key调用patchKeyedChildren方法
+            没有key,就使用patchUnkeyedChildren,旧的节点实现复用，新的节点就新增就可以
+            性能就比较低，乱序也可以复用
+        -->
         </ul>
     </div>
     <script src="https://unpkg.com/vue@next"></script>
@@ -41,7 +47,7 @@
             },
             methods: {
                 insertF() {
-                    this.leters.splice(2, 0, "f");
+                    this.leters.splice(2, 1, "f");
                 }
             },
 

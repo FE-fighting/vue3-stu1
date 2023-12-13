@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .active {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+
+        <ul>
+            <!--需求1：点击谁就添加上active-->
+            <!--需求2：用变量来记录当前点击的位置  -->
+            <li :class="{active:index === currentIndex}" v-for="(item,index) in movies" @click="liclick(index)">
+                {{item}}
+            </li>
+        </ul>
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+        const app = Vue.createApp({
+            //插值语法
+
+            data: function() {
+
+                return {
+                    movies: ["星际穿越", "阿凡达", "大话西游"],
+                    currentIndex: -1,
+                }
+            },
+            methods: {
+                liclick(index) {
+                    this.currentIndex = index
+
+                }
+            },
+
+        })
+        app.mount("#app")
+    </script>
+</body>
+
+</html>

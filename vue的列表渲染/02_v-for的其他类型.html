@@ -13,6 +13,7 @@
             <li v-for="(value,key,index) in info">{{value}}-{{key}}-{{index}}</li>
             <!--value就是值，key是key,index是索引-->
             <!--遍历数组，遍历对象，遍历字符串，遍历数字-->
+            <!--vue2 v-for优先级高于v-if-->
         </ul>
         <ul>
             <li v-for="item in 10">{{item}}</li>
