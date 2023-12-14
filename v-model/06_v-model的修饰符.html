@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <!--v-model后面跟上.lazy，会将绑定事件切换为change事件，只有在提交时才会触发-->
+        <input type="text" v-model="message">
+        <h2>message:{{message}}</h2>
+        <!--.number,v-model后面加上number转换为数字型,如果是一个string类型，会进行隐式转换-->
+        <!--.trim消除首尾的空格，自动合并-->
+        <!--可以多个修饰符-->
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+        const app = Vue.createApp({
+            //插值语法
+
+            data: function() {
+
+                return {
+                    message: "hello word"
+
+                }
+            },
+
+        })
+        app.mount("#app")
+    </script>
+</body>
+
+</html>

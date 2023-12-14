@@ -12,27 +12,29 @@
         <label for="agree">
             <input id="agree" type="checkbox" v-model="isAgree">同意协议</input>
         </label>
+        <!--单个多选框v-model即为布尔值，input的value属性并不影响v-model的值-->
 
         <h2>单选框：{{isAgree}}</h2>
         <p></p>
-        <!--checkbox多选框-->
+        <!--checkbox多选框,必须明确绑定一个value的值,当是多个复选框时，因为选中多个，所以data中属性是一个数组。当选中，将input的value添加到数组中-->
         <div class="hobbies">
             <label for="sing">
-                <input id="sing" type="checkbox" v-model="hobbies">唱</input>
+                <input id="sing" type="checkbox" v-model="hobbies" value="sing">唱</input>
 
             </label>
             <label for="dance">
-                <input id="dance" type="checkbox" v-model="hobbies">跳</input>
+                <input id="dance" type="checkbox" v-model="hobbies" value="dance">跳</input>
 
             </label>
             <label for="rap">
-                <input id="rap" type="checkbox" v-model="hobbies">raper</input>
+                <input id="rap" type="checkbox" v-model="hobbies" value="rap">raper</input>
 
              </label>
             <label for="basketball">
-                <input id="basketball" type="checkbox" v-model="hobbies">篮球</input>
+                <input id="basketball" type="checkbox" v-model="hobbies" value="basketball">篮球</input>
 
              </label>
+            <h2>爱好：{{hobbies}}</h2>
 
         </div>
     </div>
@@ -45,6 +47,7 @@
 
                 return {
                     isAgree: false,
+                    hobbies: []
 
                 }
             },

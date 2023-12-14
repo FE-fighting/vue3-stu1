@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <div class="sex">
+            <label for="male">
+                <input id="male" type="radio" name="sex" value="male">男</input>
+
+            </label>
+            <!--radio写同一个名字会互斥，不能同时都选-->
+            <label for="female">
+                <input id="female" type="radio" name="sex" value="female">女</input>
+
+            </label>
+
+            <h2>性别：{{sex}}</h2>
+        </div>
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+        const app = Vue.createApp({
+            //插值语法
+
+            data: function() {
+
+                return {
+                    sex: "女"
+
+                }
+            },
+
+        })
+        app.mount("#app")
+    </script>
+</body>
+
+</html>
