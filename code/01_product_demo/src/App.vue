@@ -23,7 +23,11 @@
             this.count--
         }
 
+    },
+    components:{
+
     }
+    //scoped解决style作用域问题
 }
 </script>
 <style scoped>
