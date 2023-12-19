@@ -54,3 +54,43 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 18.README.md：md文件一般出现在项目的根目录下面，其作用是：对项目的主要信息进行描述。
 
 19.vue.config.js：是一个可选的配置文件，如果项目的 (和 package.json 同级的) 根目录中存在这个文件，那么它会被 @vue/cli-service 自动加载。你也可以使用 package.json 中的 vue 字段，但是注意这种写法需要你严格遵照 JSON 的格式来写。
+![Alt text](image.png)
+![Alt text](image-1.png)
+![Alt text](image-2.png)
+![Alt text](image-3.png)
+![Alt text](image-4.png)
+![Alt text](image-5.png)
+![Alt text](image-6.png)
+![Alt text](image-7.png)
+![Alt text](image-8.png)
+![Alt text](image-9.png)
+![Alt text](image-10.png)
+![Alt text](image-11.png)
+![Alt text](image-12.png)
+![Alt text](image-13.png)
+![Alt text](image-14.png)
+![Alt text](image-15.png)
+![Alt text](image-16.png)
+![Alt text](image-17.png)
+![Alt text](image-18.png)
+![Alt text](image-19.png)
+生命周期流程图
+![Alt text](image-21.png)
+![Alt text](image-20.png)
+$ref的使用
+![Alt text](image-22.png)
+keep-alive
+![Alt text](image-23.png)
+![Alt text](image-24.png)
+![Alt text](image-25.png)
+缓存组件的生命周期
+进入活跃状态或者不活跃状态
+activated,活跃状态
+deactiveted，不活跃状态
+![Alt text](image-26.png)
+![Alt text](image-27.png)
+webpack打包分包
+![Alt text](image-28.png)
+![Alt text](image-29.png)
+影响首图渲染速度
+异步导入进行分包处理
