@@ -92,5 +92,18 @@ deactiveted，不活跃状态
 webpack打包分包
 ![Alt text](image-28.png)
 ![Alt text](image-29.png)
+![Alt text](image-30.png)
 影响首图渲染速度
 异步导入进行分包处理
+实现异步组件的方法：![Alt text](image-31.png)
+v-model
+![Alt text](image-32.png)
+![Alt text](image-33.png)
+![Alt text](image-34.png)
+Options API 与 Composition API(重要)
+![Alt text](image-35.png)
+![Alt text](image-36.png)
+![Alt text](image-37.png)
+![Alt text](image-38.png)
+setup
+![Alt text](image-39.png)
