@@ -1,7 +1,9 @@
 /**
 公共的css
+css定义变量
 ***/
 
 body {
     font-size: 14px;
+    --primay-color: #ff9854
 }
