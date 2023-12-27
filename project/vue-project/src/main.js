@@ -4,6 +4,7 @@ import router from './router'
 import "normalize.css"
 import "./assets/css/index.css"
 import pinia from './stores'
+
 const app = createApp(App)
 
 app.use(router)
